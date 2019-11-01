@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -21,13 +22,14 @@ public class addbook {
   
   @Test
   public void verifyaddbook() {
-
+	  String x = driver.getTitle();
+		System.out.println(x);
+		Assert.assertEquals(x, x);
   }
   
   @AfterMethod
   public void close(){
-	  driver.close();
-	  
+	  driver.close();	  
   }
 }
 
